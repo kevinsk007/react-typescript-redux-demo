@@ -12,7 +12,6 @@ const initialState = {
     ids: [],
   },
 }
-
 //猜你喜欢reducer
 const likes = (state = initialState.likes, action) => {
   switch (action.type) {
