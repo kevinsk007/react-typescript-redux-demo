@@ -14,11 +14,11 @@ class Discount extends Component<any, any> {
         <div className="discount__content">
           {data &&
             data.length > 0 &&
-            data.map((item: any, index: any) => {
+            data.map((item, index) => {
               return (
-                <a key={item.id} className="discount__item">
+                <a key={index} className="discount__item">
                   <div className="discount__itemPic">
-                    <img width="100%" height="100%" src={item.picture} />
+                    <img width="100%" height="100%" src={item.picture} alt="" />
                   </div>
                   <div className="discount__itemTitle">{item.shop}</div>
                   <div className="discount__itemPriceWrapper">

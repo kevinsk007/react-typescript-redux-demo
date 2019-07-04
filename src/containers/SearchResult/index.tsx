@@ -6,36 +6,36 @@ import KeywordBox from './components/KeywordBox'
 import Banner from '../../components/Banner'
 // import { getSearchedShops, getCurrentKeyword } from '../../redux/modules/search'
 
-// class SearchResult extends Component<any, any> {
-//   render() {
-//     const { shops, currentKeyword } = this.props
-//     return (
-//       <div>
-//         <SearchHeader onBack={this.handleBack} onSearch={this.handleSearch} />
-//         <KeywordBox text={currentKeyword} />
-//         <Banner dark />
-//         <ShopList data={shops} />
-//       </div>
-//     )
-//   }
+class SearchResult extends Component<any, any> {
+  render() {
+    const { shops, currentKeyword } = this.props
+    return (
+      <div>
+        <SearchHeader onBack={this.handleBack} onSearch={this.handleSearch} />
+        <KeywordBox text={currentKeyword} />
+        <Banner dark />
+        <ShopList data={shops} />
+      </div>
+    )
+  }
 
-//   handleBack = () => {
-//     this.props.history.push('/')
-//   }
+  handleBack = () => {
+    this.props.history.push('/')
+  }
 
-//   handleSearch = () => {
-//     this.props.history.push('/search')
-//   }
-// }
+  handleSearch = () => {
+    this.props.history.push('/search')
+  }
+}
 
-// const mapStateToProps = (state, props) => {
-//   return {
-//     shops: getSearchedShops(state),
-//     currentKeyword: getCurrentKeyword(state),
-//   }
-// }
+const mapStateToProps = (state, props) => {
+  return {
+    // shops: getSearchedShops(state),
+    // currentKeyword: getCurrentKeyword(state),
+  }
+}
 
-// export default connect(
-//   mapStateToProps,
-//   null,
-// )(SearchResult)
+export default connect(
+  mapStateToProps,
+  null,
+)(SearchResult)

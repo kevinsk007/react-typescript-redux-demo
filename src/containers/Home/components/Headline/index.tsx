@@ -42,7 +42,7 @@ class Headline extends Component<any, any> {
                 <a key={index} className="headline__sliderInner" href={item.url}>
                   <div className="headline__sliderTitle">{item.title}</div>
                   <div className="headline__sliderImgWrapper">
-                    <img className="headline__sliderImg" src={item.pic} />
+                    <img className="headline__sliderImg" src={item.pic} alt="" />
                   </div>
                 </a>
               )

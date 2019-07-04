@@ -20,7 +20,6 @@ class Home extends Component<any, any> {
   }
   render() {
     const { likes, discounts, pageCount } = this.props
-    console.log(this.props)
     return (
       <div>
         <HomeHeader />
