@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "prettier.semi": false,
+  "prettier.trailingComma": "all",
+  "prettier.singleQuote": true,
+  "prettier.printWidth": 120,
+  "tslint.autoFixOnSave": true,
+  "tslint.configFile": "./node_modules/@eagle-eye/config-react-ts-sass-web/ts-react.json",
+  "eslint.autoFixOnSave": true,
+  "eslint.options": {
+    "configFile": "./node_modules/@eagle-eye/config-react-ts-sass-web/es6-react.json"
+  }
+}
