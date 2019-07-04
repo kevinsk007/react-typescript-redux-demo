@@ -57,7 +57,13 @@ class LikeList extends Component<any, any> {
             return <LikeItem key={index} data={item} />
           })}
         </div>
-        {pageCount < 3 ? <Loading /> : <a className="likeList__viewAll">查看更多</a>}
+        {pageCount < 3 ? (
+          <Loading />
+        ) : (
+          <a href="javascript:;" className="likeList__viewAll">
+            查看更多
+          </a>
+        )}
       </div>
     )
   }

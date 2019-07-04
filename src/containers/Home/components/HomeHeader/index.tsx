@@ -7,7 +7,9 @@ class HomeHeader extends Component<any, any> {
     return (
       <div className="homeHeader">
         <header className="homeHeader__wrapper">
-          <a className="homeHeader__city">北京</a>
+          <a className="homeHeader__city" href="javscript:;">
+            北京
+          </a>
           <Link to="/search" className="homeHeader__search">
             输入商户名、地点
           </Link>

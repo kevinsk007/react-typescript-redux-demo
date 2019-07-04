@@ -1,10 +1,10 @@
-import React, { Component } from "react";
-import ShopItem from "../ShopItem"
-import "./style.css"
+import React, { Component } from 'react'
+import ShopItem from '../ShopItem'
+import './style.css'
 
 class ShopList extends Component {
   render() {
-    const {data} = this.props;
+    const { data } = this.props
     return (
       <div className="shopList">
         <div className="shopList__filter">
@@ -15,18 +15,16 @@ class ShopList extends Component {
         <div className="shopList__list">
           {data.map((item, index) => {
             return (
-              <div key={item.id}>
+              <div key={index}>
                 <ShopItem data={item} />
-                {index < data.length - 1 ? (
-                  <div className="shopList__divider" />
-                ) : null}
+                {index < data.length - 1 ? <div className="shopList__divider" /> : null}
               </div>
-            );
+            )
           })}
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default ShopList;
+export default ShopList

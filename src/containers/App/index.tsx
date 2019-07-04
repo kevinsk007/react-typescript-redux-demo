@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { bindActionCreators } from 'redux'
+// import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 // import ErrorToast from '../../components/ErrorToast'
@@ -19,10 +19,11 @@ class App extends Component<any, any> {
       <div className="App">
         <Router>
           <Switch>
-            {/* <Route path="/detail/:id" component={ProductDetail} />
+            <Route path="/" exact component={Home} />
             <Route path="/search" component={Search} />
+
+            {/* <Route path="/detail/:id" component={ProductDetail} />
             <Route path="/search_result" component={SearchResult} /> */}
-            <Route path="/" component={Home} />
           </Switch>
         </Router>
         {/* {error ? <ErrorToast msg={error} clearError={clearError} /> : null} */}
