@@ -109,7 +109,7 @@ const searchedShops = (state = { isFetching: false, ids: [] }, action) => {
         ...state,
         isFetching: false,
         ids: action.response.ids,
-        data: action.response.keywords,
+        data: action.response.shops,
       }
     case types.FETCH_SHOPS_FAILURE:
       return { ...state, isFetching: false }
@@ -154,6 +154,7 @@ const reducer = combineReducers({
   inputText,
   historyKeywords,
   searchedShopsByKeyword,
+  searchedShops,
 })
 
 export default reducer

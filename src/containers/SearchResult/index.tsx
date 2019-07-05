@@ -4,7 +4,6 @@ import ShopList from './components/ShopList'
 import SearchHeader from './components/SearchHeader'
 import KeywordBox from './components/KeywordBox'
 import Banner from '../../components/Banner'
-// import { getSearchedShops, getCurrentKeyword } from '../../redux/modules/search'
 
 class SearchResult extends Component<any, any> {
   render() {
@@ -28,10 +27,33 @@ class SearchResult extends Component<any, any> {
   }
 }
 
+const getSearchedShops = state => {
+  const keywordId = state.search.historyKeywords[0]
+  if (!keywordId) {
+    return []
+  }
+  const shops = state.search.searchedShopsByKeyword[keywordId]
+  if (shops) {
+    return shops.ids.map(id => {
+      return state.search.searchedShops.data[id]
+    })
+  } else {
+    return []
+  }
+}
+
+const getCurrentKeyword = state => {
+  const keywordId = state.search.historyKeywords[0]
+  if (!keywordId) {
+    return ''
+  }
+  return []
+}
+
 const mapStateToProps = (state, props) => {
   return {
-    // shops: getSearchedShops(state),
-    // currentKeyword: getCurrentKeyword(state),
+    shops: getSearchedShops(state),
+    currentKeyword: getCurrentKeyword(state),
   }
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ShopItem from '../ShopItem'
 import './style.css'
 
-class ShopList extends Component {
+class ShopList extends Component<any, any> {
   render() {
     const { data } = this.props
     return (
@@ -13,14 +13,16 @@ class ShopList extends Component {
           <span className="shopList__filterItem">智能排序</span>
         </div>
         <div className="shopList__list">
-          {data.map((item, index) => {
-            return (
-              <div key={index}>
-                <ShopItem data={item} />
-                {index < data.length - 1 ? <div className="shopList__divider" /> : null}
-              </div>
-            )
-          })}
+          {data &&
+            data.length > 0 &&
+            data.map((item, index) => {
+              return (
+                <div key={index}>
+                  <ShopItem data={item} />
+                  {index < data.length - 1 ? <div className="shopList__divider" /> : null}
+                </div>
+              )
+            })}
         </div>
       </div>
     )

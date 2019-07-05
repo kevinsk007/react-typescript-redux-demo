@@ -9,7 +9,6 @@ import { actions as searchActions } from '../../redux/search/actions'
 class Search extends Component<any, any> {
   render() {
     const { inputText, relatedKeywords, popularKeywords, historyKeywords } = this.props
-    console.log(this.props)
     return (
       <div>
         <SearchBox
@@ -56,7 +55,7 @@ class Search extends Component<any, any> {
     setInputText(item.keyword)
     addHistoryKeyword(item.id)
     loadRelatedShops(item.id)
-    // this.props.history.push('/search_result')
+    this.props.history.push('/search_result')
   }
 
   // 清除历史记录

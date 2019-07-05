@@ -7,7 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from '../Home'
 // import ProductDetail from '../ProductDetail'
 import Search from '../Search'
-// import SearchResult from '../SearchResult'
+import SearchResult from '../SearchResult'
 
 class App extends Component<any, any> {
   render() {
@@ -21,9 +21,9 @@ class App extends Component<any, any> {
           <Switch>
             <Route path="/" exact component={Home} />
             <Route path="/search" component={Search} />
-
+            <Route path="/search_result" component={SearchResult} />
             {/* <Route path="/detail/:id" component={ProductDetail} />
-            <Route path="/search_result" component={SearchResult} /> */}
+             */}
           </Switch>
         </Router>
         {/* {error ? <ErrorToast msg={error} clearError={clearError} /> : null} */}
